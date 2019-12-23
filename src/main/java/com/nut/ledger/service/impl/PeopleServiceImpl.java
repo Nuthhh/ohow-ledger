@@ -18,8 +18,11 @@ public class PeopleServiceImpl implements IPeopleService {
 
     private final Logger logger = LogManager.getLogger(PeopleMapper.class);
 
-    @Autowired
-    private PeopleMapper peopleMapper;
+    private final PeopleMapper peopleMapper;
+
+    public PeopleServiceImpl(PeopleMapper peopleMapper) {
+        this.peopleMapper = peopleMapper;
+    }
 
     @Override
     public String get() {

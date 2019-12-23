@@ -35,7 +35,7 @@ public class MybatisConfig {
         sqlSessionFactory.setDataSource(myDynamicDataSource);
         sqlSessionFactory.setTypeAliasesPackage("com.nut.ledger.db.pojo");
         Resource[] resources = new PathMatchingResourcePatternResolver()
-                .getResources("classpath:com/nut/ledger/db/mapper/*.xml");
+                .getResources("classpath:com/nut/ledger/db/mapper/*Mapper.xml");
         sqlSessionFactory.setMapperLocations(resources);
         return sqlSessionFactory;
     }
